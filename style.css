@@ -1,0 +1,67 @@
+/* Custom styles for the resume parser app */
+
+/* Global styles */
+body {
+    min-height: 100vh;
+    background-color: var(--bs-body-bg);
+}
+
+/* Custom file upload styles */
+.custom-file-upload {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Score Circle Animation */
+.score-circle circle:nth-child(2) {
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+/* Experience List */
+.experience-list .list-group-item {
+    background-color: transparent;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.experience-list .list-group-item:last-child {
+    border-bottom: none;
+}
+
+.experience-details {
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Job Description */
+.job-description {
+    white-space: pre-line;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Card styling */
+.card {
+    background-color: var(--bs-tertiary-bg);
+}
+
+/* Fade in animation for results */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.2s;
+}
